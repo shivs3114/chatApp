@@ -54,26 +54,47 @@ class LoginPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text('Don\'t have an account?'),
-              TextButton(
-                onPressed: onTap
-                  
-                  // Navigate to the registration page
-                ,
-                child: Text('Register',style: TextStyle(
+                TextButton(
+                onPressed: onTap,
+                child: Text(
+                  'Register',
+                  style: TextStyle(
                   color: Theme.of(context).colorScheme.primary,
-                )),
-              ),
+                  decoration: TextDecoration.underline,
+                  ),
+                ),
+                ),
+              
             ],
           ),
-          GestureDetector(
-            onTap: () => Get.toNamed(PageRoutes().home),
-            child: Row(
-              children: [
-                Icon(Icons.person),
-                Text('Continue as Guest'),
-              ],
-            ),
-          )
+            Center(
+              child: GestureDetector(
+              onTap: () => Get.toNamed(PageRoutes().home),
+              child: Container(
+                decoration: BoxDecoration(
+                border: Border.all(
+                  color: Theme.of(context).colorScheme.primary,
+                  width: 1.5,
+                ),
+                borderRadius: BorderRadius.circular(12),
+                ),
+                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(Icons.person, color: Theme.of(context).colorScheme.primary),
+                  SizedBox(width: 8),
+                  Text(
+                  'Continue as Guest',
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
+                  ),
+                ],
+                ),
+              ),
+              ),
+            )
 
 
 

@@ -14,34 +14,20 @@ class RegisterPage extends StatelessWidget {
   final void Function()? onTap;
   // Function to handle registration logic
 
-  void register(BuildContext context) {
+  void register(BuildContext context) async {
     try {
       if (emailController.text.isEmpty || pwController.text.isEmpty || pwCController.text.isEmpty) {
-        throw Exception('Please fill in all fields');
+      throw Exception('Please fill in all fields');
       }
       if (pwController.text != pwCController.text) {
-        throw Exception('Passwords do not match');
+      throw Exception('Passwords do not match');
       }
-      // Here you would typically call your registration service
-      authService.registerWithEmail(emailController.text.trim(), pwController.text.trim());
-      showDialog(context: context, builder: (context) {
-        return AlertDialog(
-          title: Text('Success'),
-          content: Text('Registration successful for ${emailController.text}'),
-          actions: [
-            TextButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-              child: Text('OK'),
-            ),
-          ],
-        );
-      });
-      // For example: await authService.registerWithEmail(emailController.text.trim(), pwController.text.trim());
+      // Call your registration service
+      await authService.registerWithEmail(emailController.text.trim(), pwController.text.trim());
+      
       print('Registration successful for ${emailController.text}');
-      Get.toNamed(PageRoutes().home);
-    } catch (e) {
+    }
+     catch (e) {
       print('Registration failed: $e');
     }
   }

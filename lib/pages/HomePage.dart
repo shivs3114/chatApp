@@ -125,8 +125,11 @@ void signOut(BuildContext context) {
   }
 
 Widget buildUserTile({required Map<String, dynamic> user}) {
-  if(user['email']!=authController.getCurrentUser()!.email)
-  {return UserTile(
+  // Don't show the logged-in user's email
+  if (user['email'] == authController.getCurrentUser()?.email) {
+    return SizedBox.shrink();
+  }
+  return UserTile(
     text: user['email'] ?? 'Unknown User',
     onTap: () {
       // Handle user tap, e.g., navigate to chat page
@@ -135,11 +138,10 @@ Widget buildUserTile({required Map<String, dynamic> user}) {
         'receiverEmail': user['email'] ?? 'Unknown User', // Pass user name
       });
     },
-  );}
-  else{
-    return Container();
-  }
+  );
 }
+
+
 }
 class UserTile extends StatelessWidget {
   final String text;
