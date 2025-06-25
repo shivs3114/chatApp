@@ -1,16 +1,46 @@
-# chatapp
+# 💬 GupShup(ChatApp)
 
-A new Flutter project.
+A real-time chat application built with **Flutter** and **Firebase**.  
+This app enables users to sign in, send messages, and chat in real time with other registered users.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🚀 Features
 
-A few resources to get you started if this is your first Flutter project:
+- 🔐 Firebase Authentication (Email/Password)
+- 💬 Real-time Messaging using Cloud Firestore
+- 🟢 Online user tracking
+- 📲 Modern UI using Flutter
+- 📅 Timestamps on messages
+- 📌 Auto-scroll to latest messages
+- 🛡️ Message bubble styling (left/right aligned based on sender)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠️ Tech Stack
+
+| Layer        | Technology           |
+|--------------|----------------------|
+| Frontend     | Flutter              |
+| Backend      | Firebase Firestore   |
+| Auth         | Firebase Auth        |
+| State Mgmt   | GetX (optional)      |
+
+---
+
+## 📸 Screenshots
+
+<!-- Add your screenshots here -->
+- Chat UI
+- Login/Signup screen
+- Message bubbles
+
+---
+
+## 🔧 Getting Started
+
+### Prerequisites
+
+- Flutter SDK (latest version)
+- Firebase account
+- Android Studio or VS Code
