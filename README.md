@@ -24,7 +24,7 @@ This app enables users to sign in, send messages, and chat in real time with oth
 | Frontend     | Flutter              |
 | Backend      | Firebase Firestore   |
 | Auth         | Firebase Auth        |
-| State Mgmt   | GetX (optional)      |
+| State Mgmt   | GetX                 |
 
 ---
 
