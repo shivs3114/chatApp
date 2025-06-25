@@ -29,13 +29,9 @@ This app enables users to sign in, send messages, and chat in real time with oth
 ---
 
 ## 📸 Screenshots
+![IMG-20250625-WA0009](https://github.com/user-attachments/assets/b56b8fbd-a3fe-40a2-ad61-09d0cc12b39f)
 
-<!-- Add your screenshots here -->
-- Chat UI
-- Login/Signup screen
-- Message bubbles
 
----
 
 ## 🔧 Getting Started
 
